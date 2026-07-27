@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Mapping System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= LEFT PANEL ================= -->
+
+        <div class="sidebar">
+
+            <h1>Campus Mapping</h1>
+
+            <hr>
+
+            <h2>Add Room</h2>
+
+            <input
+                type="text"
+                id="roomNo"
+                placeholder="Room Number">
+
+            <input
+                type="number"
+                id="floor"
+                placeholder="Floor">
+
+            <input
+                type="text"
+                id="building"
+                placeholder="Building">
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Description">
+
+            <input
+                type="number"
+                id="x"
+                placeholder="X Position">
+
+            <input
+                type="number"
+                id="y"
+                placeholder="Y Position">
+
+            <button id="addRoomBtn">
+                Add Room
+            </button>
+
+            <hr>
+
+            <h2>Connect Rooms</h2>
+
+            <select id="fromRoom">
+
+                <option value="">
+                    From Room
+                </option>
+
+            </select>
+
+            <select id="toRoom">
+
+                <option value="">
+                    To Room
+                </option>
+
+            </select>
+
+            <input
+                type="number"
+                id="steps"
+                placeholder="Steps">
+
+            <button id="connectBtn">
+                Connect Rooms
+            </button>
+
+            <hr>
+
+            <h2>Rooms</h2>
+
+            <ul id="roomList"></ul>
+
+            <hr>
+
+            <h2>Connections</h2>
+
+            <ul id="edgeList"></ul>
+
+        </div>
+
+        <!-- ================= MAP ================= -->
+
+        <div class="map-container">
+
+            <svg
+                id="map"
+                width="1200"
+                height="900">
+
+            </svg>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
