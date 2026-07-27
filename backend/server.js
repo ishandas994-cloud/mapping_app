@@ -11,8 +11,13 @@ connectDB();
 const app = express();
 
 app.use(cors());
-
 app.use(express.json());
+
+const roomRoutes = require("./routes/roomRoutes");
+const edgeRoutes = require("./routes/edgeRoutes");
+
+app.use("/api/rooms", roomRoutes);
+app.use("/api/edges", edgeRoutes);
 
 app.get("/", (req, res) => {
     res.send("Mapping Backend Running...");
